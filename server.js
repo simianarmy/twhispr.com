@@ -5,7 +5,7 @@ var app = express();
 app.use(app.router);
 app.use(express.static(__dirname + "/public"));
 
-app.get("/", function(req, res){
+app.get("/audio", function(req, res){
         res.send("Hello, World!");
 });
 
