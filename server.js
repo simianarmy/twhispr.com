@@ -8,14 +8,14 @@ app.set('views', './views')
 app.set('view engine', 'jade');
 
 // Renders the Twitter Card player container page
-app.get('/cards/:author/:scid', function (req, res) {
+app.get('/cards/:author/:scid/:trackId', function (req, res) {
     // TODO: Get the soundcloud track ID
-    var trackId = 192289050;
+    //var trackId = 192289050;
 
     res.render('card', {
         author: req.params.author,
         scId: req.params.scid,
-        scTrackId: trackId
+        scTrackId: req.params.trackId
     });
 });
 
