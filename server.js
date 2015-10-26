@@ -11,11 +11,13 @@ app.set('view engine', 'jade');
 app.get('/cards/:author/:scid/:trackId', function (req, res) {
     // TODO: Get the soundcloud track ID
     //var trackId = 192289050;
+    var max = 49;
 
     res.render('card', {
         author: req.params.author,
         scId: req.params.scid,
-        scTrackId: req.params.trackId
+        scTrackId: req.params.trackId,
+        randomImage: (Math.floor(Math.random() * (max - 1)) + 1) + '.jpg'
     });
 });
 
