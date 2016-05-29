@@ -1,0 +1,21 @@
+doctype html
+html(lang="en")
+  head
+    script(src="/js/audio.min.js")
+  body
+    style(type="text/css").
+        audio {  
+           width:100%; 
+           max-width:600px; 
+           height:auto; 
+        }
+
+    script.
+        audiojs.events.ready(function() {
+            var as = audiojs.createAll();
+        });
+
+    audio(src="#{trackUrl}" preload="auto")
+
+
+
