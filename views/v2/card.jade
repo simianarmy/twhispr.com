@@ -12,12 +12,17 @@ html(lang="en")
     script(src="/js/audio.min.js")
   body
 
+    iframe(
+        id="audio-widget"
+        width = "100%"
+        scrolling = "no"
+        frameborder = "no"
+        src = "/v2/player/#{trackId}"
+        )
     script.
         audiojs.events.ready(function() {
             var as = audiojs.createAll();
         });
-
-    audio(src="#{trackUrl}" preload="auto")
 
     h4 Check out what @#{author} just 
         a(href="/v2/player/#{trackId}") said
