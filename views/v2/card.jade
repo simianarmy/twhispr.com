@@ -1,7 +1,10 @@
 doctype html
 html(lang="en")
   head
+    meta(content="text/html; charset=UTF-8", http-equiv="Content-Type")
     meta(name="twitter:card" content="player")
+    meta(name="twitter:site", content="@twhisprer")
+    meta(name="twitter:title", content="@#{author} said")
     meta(name="twitter:description", content="Hear what #{author} just tweeted")
     meta(name="twitter:player", content="https://twhispr.com/v2/player/#{trackId}")
     meta(name="twitter:player:width", content="380")
@@ -17,12 +20,8 @@ html(lang="en")
         width = "100%"
         scrolling = "no"
         frameborder = "no"
-        src = "/v2/player/#{trackId}"
+        src = "https://twhispr.com/v2/player/#{trackId}"
         )
-    script.
-        audiojs.events.ready(function() {
-            var as = audiojs.createAll();
-        });
 
     h4 Check out what @#{author} just 
         a(href="/v2/player/#{trackId}") said
