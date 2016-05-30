@@ -8,7 +8,7 @@ html(lang="en")
     meta(name="twitter:description", content="Hear what #{author} just tweeted")
     meta(name="twitter:player", content="https://twhispr.com/v2/player/#{trackId}")
     meta(name="twitter:player:width", content="380")
-    meta(name="twitter:player:height", content="100")
+    meta(name="twitter:player:height", content="234")
     meta(name="twitter:image", content="https://twhispr.com/images/#{randomImage}")
     meta(name="twitter:player:stream", content="#{trackUrl}")
     meta(name="twitter:player:stream:content_type", content="application/octet-stream")
@@ -18,12 +18,18 @@ html(lang="en")
     iframe(
         id="audio-widget"
         width = "100%"
+        height = "242px"
         scrolling = "no"
         frameborder = "no"
         src = "/v2/player/#{trackId}"
         )
 
-    h4 Check out what @#{author} just 
+    p
+        b @#{author}&nbsp;
         a(href="https://twhispr.com/v2/player/#{trackId}") said
+
+    <a href="https://twitter.com/#{author}" class="twitter-follow-button" data-show-count="false" data-size="large">@#{author}</a>
+<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+    
 
 
