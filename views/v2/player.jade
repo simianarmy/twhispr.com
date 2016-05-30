@@ -4,10 +4,10 @@ html(lang="en")
     script(src="/js/audio.min.js")
   body
     style(type="text/css").
-        audio {  
-           width:100%; 
-           max-width:600px; 
-           height:auto; 
+        audio {
+           width:100%;
+           max-width:600px;
+           height:auto;
         }
 
     script.
@@ -15,7 +15,7 @@ html(lang="en")
             var as = audiojs.createAll();
         });
 
-    audio(src="#{trackUrl}" preload="auto")
+    audio(src="#{trackUrl} preload="auto" autoplay="1")
 
 
 
