@@ -1,16 +1,14 @@
 {
-    "name": "twhispr.com",
-        "version": "1.0.0",
-
-        "private": true,
-
-        "engines": {
-            "node": ">=0.10.0",
-            "npm": ">=1.3"
-        },
-
-        "dependencies": {
-            "express": "~3.0",
-            "jade": "1.9.2"
-        }
+  "name": "twhispr.com",
+  "version": "1.0.0",
+  "private": true,
+  "engines": {
+    "node": ">=0.10.0",
+    "npm": ">=1.3"
+  },
+  "dependencies": {
+    "express": "~3.0",
+    "express-useragent": "^0.2.4",
+    "jade": "1.9.2"
+  }
 }
